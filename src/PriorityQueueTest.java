@@ -46,7 +46,7 @@ public class PriorityQueueTest {
         assertThrows(ClassCastException.class, () -> {
             PriorityQueue<Integer> queue = new PriorityQueue<Integer>();
             queue.add(1);
-            queue.add("bad");
+            queue.add("bad code");
         });
     }
 }
