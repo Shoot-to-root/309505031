@@ -47,7 +47,7 @@ public class PriorityQueueTest {
             PriorityQueue<int[]> queue = new PriorityQueue<int[]>();
             int [] test = new int[] {1, 2};
             queue.add(test);
-            //queue.add("bad");
+            queue.add("bad");
         });
     }
 }
