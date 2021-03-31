@@ -9,11 +9,11 @@ import java.util.PriorityQueue;
 public class PriorityQueueTest {
     private static Stream<Arguments> provideArgsForQueueTest() {
         return Stream.of(
-                Arguments.of(new Integer[] {-1, -2, -3}, new Integer[] {-3, -2, -1}),
-                Arguments.of(new Integer[] {10, 5, 8, 11, 0}, new Integer[] {0, 5, 8, 10, 11}),
-                Arguments.of(new Integer[] {9}, new Integer[] {9}),
-                Arguments.of(new Integer[] {0, 0, 0}, new Integer[] {0, 0, 0}),
-                Arguments.of(new Integer[] {}, new Integer[] {})
+                Arguments.of(new int[] {-1, -2, -3}, new int[] {-3, -2, -1}),
+                Arguments.of(new int[] {10, 5, 8, 11, 0}, new int[] {0, 5, 8, 10, 11}),
+                Arguments.of(new int[] {9}, new int[] {9}),
+                Arguments.of(new int[] {0, 0, 0}, new int[] {0, 0, 0}),
+                Arguments.of(new int[] {}, new int[] {})
         );
     }
 
@@ -44,9 +44,10 @@ public class PriorityQueueTest {
     @Test
     public void BadCastTest() {
         assertThrows(ClassCastException.class, () -> {
-            PriorityQueue<Integer> queue = new PriorityQueue<Integer>();
-            queue.add(1);
-            queue.add("bad");
+            PriorityQueue<int[]> queue = new PriorityQueue<int[]>();
+            int [] test = new int[] {1, 2};
+            queue.add(test);
+            //queue.add("bad");
         });
     }
 }
